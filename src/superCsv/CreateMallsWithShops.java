@@ -1,0 +1,89 @@
+package superCsv;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+public class CreateMallsWithShops {
+	
+	static List<Mall> malls;
+	static List<Mall_Shop> mall_shops;
+	static List<Shop> shops;
+	
+	
+	public static void main(String args[]){
+		try{
+			malls = ReadMallCsv.getMalls();
+			mall_shops = ReadMallShopCsv.getMallShops();
+			shops = ReadShopCsv.getShops();
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
+		
+		createMallWithShops();		// Changes the malls list to malls containing shops
+	}
+
+	private static void createMallWithShops() {
+		
+		List<String> shopIds;
+		List<Shop> shops_in_mall;
+		HashMap<String, Shop> shops_in_mall_map;
+		for(Mall mall : malls){
+			shopIds = getMallShopIds(mall);
+			shops_in_mall = getMatchingShops(shopIds);
+			shops_in_mall_map = getHashMapShops(shops_in_mall);
+			mall.setShops(shops_in_mall_map);
+			
+			System.out.println(mall);
+		}
+		
+	}
+
+
+	private static List<String> getMallShopIds(Mall mall) {
+		
+		String mallId = mall.getId();
+		List<String> filteredShopIds = new ArrayList<>();
+		
+		for(Mall_Shop mall_shop : mall_shops){
+			
+			if(mall_shop.getMallId().equals(mallId)){
+				filteredShopIds.add(mall_shop.getShopId());
+			}
+		}
+		return filteredShopIds;
+	}
+	
+	private static List<Shop> getMatchingShops(List<String> shopIds) {
+		
+		List<Shop> filteredShops = new ArrayList<>();
+		
+		for(String shopId : shopIds){
+			
+			for(Shop shop : shops){
+				if(shopId.equals(shop.getId())){
+					filteredShops.add(shop);
+				}
+			}
+		}
+		return filteredShops;
+	}
+
+	public static List<Mall> getMalls()
+	{
+		main(null);
+		return malls;
+	}
+	
+	private static HashMap<String, Shop> getHashMapShops(List<Shop> shopList){
+		HashMap<String, Shop> shopMap = new HashMap<>();
+		
+		for(Shop shop : shopList){		
+			shopMap.put(shop.getId(), shop);		
+		}
+		
+		return shopMap;
+	}
+	
+}

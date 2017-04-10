@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/Abhiraj/Downloads/super-csv-distribution-2.4.0-bin/super-csv-java8/lib/super-csv-2.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Abhiraj/workspace/superCsv/lib/jackson-core-asl-1.9.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Abhiraj/workspace/superCsv/lib/jackson-mapper-asl-1.9.13.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
