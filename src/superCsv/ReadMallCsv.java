@@ -16,7 +16,7 @@ import org.supercsv.prefs.CsvPreference;
 
 public class ReadMallCsv {
 	
-	static final String CSV_FILENAME = "mall.csv";
+	static final String CSV_FILENAME = "csv/Malls.csv";
 	
 	public static void main(String args[])
 	{

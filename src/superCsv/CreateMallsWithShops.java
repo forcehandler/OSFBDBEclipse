@@ -15,7 +15,7 @@ public class CreateMallsWithShops {
 		try{
 			malls = ReadMallCsv.getMalls();
 			mall_shops = ReadMallShopCsv.getMallShops();
-			shops = ReadShopCsv.getShops();
+			shops = CreateShopsWithCategories.getShops();
 		}
 		catch(Exception e){
 			System.out.println(e);
@@ -43,7 +43,7 @@ public class CreateMallsWithShops {
 
 	private static List<String> getMallShopIds(Mall mall) {
 		
-		String mallId = mall.getId();
+		String mallId = mall.getMallId();
 		List<String> filteredShopIds = new ArrayList<>();
 		
 		for(Mall_Shop mall_shop : mall_shops){
@@ -62,7 +62,7 @@ public class CreateMallsWithShops {
 		for(String shopId : shopIds){
 			
 			for(Shop shop : shops){
-				if(shopId.equals(shop.getId())){
+				if(shopId.equals(shop.getShopId())){
 					filteredShops.add(shop);
 				}
 			}
@@ -72,7 +72,8 @@ public class CreateMallsWithShops {
 
 	public static List<Mall> getMalls()
 	{
-		main(null);
+		main(null);				// I call getMalls() method from other class and malls is 
+								// initialized only after main is run so I am running main()
 		return malls;
 	}
 	
@@ -80,7 +81,7 @@ public class CreateMallsWithShops {
 		HashMap<String, Shop> shopMap = new HashMap<>();
 		
 		for(Shop shop : shopList){		
-			shopMap.put(shop.getId(), shop);		
+			shopMap.put(shop.getShopId(), shop);		
 		}
 		
 		return shopMap;

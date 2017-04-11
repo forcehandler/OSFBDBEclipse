@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.supercsv.cellprocessor.Optional;
+import org.supercsv.cellprocessor.ParseBool;
 import org.supercsv.cellprocessor.constraint.NotNull;
 import org.supercsv.cellprocessor.constraint.UniqueHashCode;
 import org.supercsv.cellprocessor.ift.CellProcessor;
@@ -14,7 +15,7 @@ import org.supercsv.prefs.CsvPreference;
 
 public class ReadShopCsv {
 	
-	static final String CSV_FILENAME = "shops.csv";
+	static final String CSV_FILENAME = "csv/Shops.csv";
 	public static void main(String args[])
 	{
 		try{
@@ -32,7 +33,13 @@ public class ReadShopCsv {
 						
 				new UniqueHashCode(),		// shopId
 				new NotNull(),		//shop name
-				new Optional()		// brandImageUrl
+				new Optional(),		// brandImageUrl
+				new Optional(),
+				new Optional(),		// location
+				new Optional(),		// phone
+				new Optional(),		// email
+				new NotNull(new ParseBool()),	// hasMenu
+				new NotNull()		// gender
 		};
 		return processors;
 	}

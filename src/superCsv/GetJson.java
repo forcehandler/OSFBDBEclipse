@@ -38,7 +38,7 @@ public class GetJson {
 		
 		HashMap<String, Mall> mallHashMap = new HashMap<String, Mall>();
 		for(Mall m : mallList){
-			mallHashMap.put(m.getId(), m);
+			mallHashMap.put(m.getMallId(), m);
 		}
 		return mallHashMap;
 	}
