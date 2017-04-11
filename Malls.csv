@@ -1,5 +1,5 @@
-mallID,address,phone,email,latitude,longitude,radius,m1,m2,m3,m4,m5
-GA_0832_MDG,"Gomtinagar, Lucknow",5395,fr@fun.com,13.42543543,34.43532,200,500,1000,2000,3000,4000
-MH_0253_CCM,Unthwadi,321,abc@d.com,14.42543543,34.43532,200,500,1000,2000,3000,4000
-MH_0020_PHX,Kharadi,699,abc@d.com,15.42543543,34.43532,200,500,1000,2000,3000,4000
-MH_0020_SENS,Viman Nagar,545,abc@d.com,16.42543543,34.43532,200,500,1000,2000,3000,4000
+mallID,name,address,phone,email,latitude,longitude,radius,m1,m2,m3,m4,m5
+GA_0832_MDG,Mall de goa,"Gomtinagar, Lucknow",5395,fr@fun.com,13.42543543,34.43532,200,500,1000,2000,3000,4000
+MH_0253_CCM,City center mall,Unthwadi,321,abc@d.com,14.42543543,34.43532,200,500,1000,2000,3000,4000
+MH_0020_PHX,Phoenix Mall,Kharadi,699,abc@d.com,15.42543543,34.43532,200,500,1000,2000,3000,4000
+MH_0020_SENS,Sensational Mall,Viman Nagar,545,abc@d.com,16.42543543,34.43532,200,500,1000,2000,3000,4000

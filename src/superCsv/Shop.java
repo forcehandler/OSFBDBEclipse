@@ -14,7 +14,7 @@ public class Shop {
 	boolean hasMenu;
 	String gender;
 	HashMap<Integer, String> categories;
-	
+	HashMap<String, Offer> offers;
 	
 	public Shop() {}
 	
@@ -81,6 +81,13 @@ public class Shop {
 
 	public void setCategories(HashMap<Integer, String> categories) {
 		this.categories = categories;
+	}
+	public HashMap<String, Offer> getOffers() {
+		return offers;
+	}
+
+	public void setOffers(HashMap<String, Offer> offers) {
+		this.offers = offers;
 	}
 
 	@Override

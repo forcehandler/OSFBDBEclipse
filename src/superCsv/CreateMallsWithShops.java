@@ -15,7 +15,7 @@ public class CreateMallsWithShops {
 		try{
 			malls = ReadMallCsv.getMalls();
 			mall_shops = ReadMallShopCsv.getMallShops();
-			shops = CreateShopsWithCategories.getShops();
+			shops = CreateShops.getShops();
 		}
 		catch(Exception e){
 			System.out.println(e);
