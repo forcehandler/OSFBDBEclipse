@@ -24,6 +24,7 @@ public class Mall {
 	
 	HashMap<String, Shop> shops;
 	HashMap<String, Coupon> coupons;
+	HashMap<String, Event> events;
 	
 	public String getMallId() {
 		return mallId;
@@ -115,6 +116,13 @@ public class Mall {
 	public void setCoupons(HashMap<String, Coupon> coupons) {
 		this.coupons = coupons;
 	}
+	public HashMap<String, Event> getEvents() {
+		return events;
+	}
+	public void setEvents(HashMap<String, Event> events) {
+		this.events = events;
+	}
+	
 	
 	@Override
 	public String toString()
