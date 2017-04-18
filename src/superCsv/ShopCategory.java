@@ -3,7 +3,7 @@ package superCsv;
 public class ShopCategory {
 
 	String shopId;
-	int categoryId;
+	String categoryId;
 	
 	public ShopCategory() {}
 
@@ -15,11 +15,11 @@ public class ShopCategory {
 		this.shopId = shopId;
 	}
 
-	public int getCategoryId() {
+	public String getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryId(int categoryId) {
+	public void setCategoryId(String categoryId) {
 		this.categoryId = categoryId;
 	}
 	

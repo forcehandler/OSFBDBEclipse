@@ -9,19 +9,20 @@ import org.codehaus.jackson.map.ObjectMapper;
 public class GetJson {
 
 	private static List<Mall> malls;
+	private static HashMap<String, Mall> mallsMap;
 	public static void main(String args[]){
 		
-		malls = CreateMallsWithShops.getMalls();
-		Malls fmalls = new Malls();
+		malls = CreateMalls.getMalls();
 		
-		fmalls.setMalls(getHashMapMall(malls));  						// send a list of malls and get a hashmap of malls
+		
+		mallsMap = getHashMapMall(malls);// send a list of malls and get a hashmap of malls
 		
 		ObjectMapper mapper = new ObjectMapper();
 		String json;
 		try{
-			json = mapper.writeValueAsString(fmalls);
+			json = mapper.writeValueAsString(mallsMap);
 			System.out.println(json);
-			mapper.writeValue(new File("d:\\malls.json"), fmalls);
+			mapper.writeValue(new File("d:\\malls.json"), mallsMap);
 		}
 		catch(Exception e)
 		{

@@ -23,6 +23,7 @@ public class Mall {
 	int m5;
 	
 	HashMap<String, Shop> shops;
+	HashMap<String, Coupon> coupons;
 	
 	public String getMallId() {
 		return mallId;
@@ -107,6 +108,12 @@ public class Mall {
 	}
 	public void setShops(HashMap<String, Shop> shops) {
 		this.shops = shops;
+	}
+	public HashMap<String, Coupon> getCoupons() {
+		return coupons;
+	}
+	public void setCoupons(HashMap<String, Coupon> coupons) {
+		this.coupons = coupons;
 	}
 	
 	@Override

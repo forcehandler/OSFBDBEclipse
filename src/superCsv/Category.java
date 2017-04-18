@@ -4,14 +4,14 @@ import java.util.HashMap;
 
 public class Category {
 
-	int categoryId;
+	String categoryId;
 	String name;	
 
-	public int getCategoryId() {
+	public String getCategoryId() {
 		return categoryId;
 	}
 
-	public void setCategoryId(int categoryId) {
+	public void setCategoryId(String categoryId) {
 		this.categoryId = categoryId;
 	}
 

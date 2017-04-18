@@ -30,7 +30,7 @@ static final String CSV_FILENAME = "csv/Categories.csv";
 	private static CellProcessor[] getProcessors()
 	{
 		final CellProcessor[] processors = new CellProcessor[]{
-				new UniqueHashCode(new ParseInt()),	// CategoryId should be unique
+				new UniqueHashCode(),	// CategoryId should be unique
 				new NotNull()		// Category name
 				
 				

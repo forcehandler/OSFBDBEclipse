@@ -6,7 +6,7 @@ public class Offer {
 	String description;
 	String validity;
 	String tnc;
-	String couponImageURL;
+	String offerImageURL;
 	public Offer() {}
 	public String getOfferId() {
 		return offerId;
@@ -32,11 +32,11 @@ public class Offer {
 	public void setTnc(String tnc) {
 		this.tnc = tnc;
 	}
-	public String getCouponImageURL() {
-		return couponImageURL;
+	public String getOfferImageURL() {
+		return offerImageURL;
 	}
-	public void setCouponImageURL(String couponImageURL) {
-		this.couponImageURL = couponImageURL;
+	public void setOfferImageURL(String offerImageURL) {
+		this.offerImageURL = offerImageURL;
 	}
 	
 	@Override

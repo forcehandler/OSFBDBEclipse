@@ -32,8 +32,8 @@ public class CreateShops {
 
 	private static void createShopWithCategories() {
 		
-		List<Integer> categoryIds;
-		HashMap<Integer, String> categories_in_shop;
+		List<String> categoryIds;
+		HashMap<String, String> categories_in_shop;
 		
 		List<String>	offerIds;
 		HashMap<String, Offer> offers_in_shop; 
@@ -54,10 +54,10 @@ public class CreateShops {
 	}
 
 
-	private static List<Integer> getShopCategoryIds(Shop shop) {
+	private static List<String> getShopCategoryIds(Shop shop) {
 		
 		String shopId = shop.getShopId();
-		List<Integer> filteredCategoryIds = new ArrayList<>();
+		List<String> filteredCategoryIds = new ArrayList<>();
 		
 		for(ShopCategory shop_category : shop_categories){
 			
@@ -68,14 +68,14 @@ public class CreateShops {
 		return filteredCategoryIds;
 	}
 	
-	private static HashMap<Integer, String> getMatchingCategories(List<Integer> categoryIds) {
+	private static HashMap<String, String> getMatchingCategories(List<String> categoryIds) {
 		
-		HashMap<Integer, String> filteredCategories = new HashMap<>();
+		HashMap<String, String> filteredCategories = new HashMap<>();
 		
-		for(int category_id : categoryIds){
+		for(String category_id : categoryIds){
 			
 			for(Category category : categories){
-				if(category_id == category.getCategoryId()){
+				if(category_id.equals(category.getCategoryId())){
 					filteredCategories.put(category_id, category.getName());
 				}
 			}

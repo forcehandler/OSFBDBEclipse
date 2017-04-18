@@ -13,7 +13,7 @@ public class Shop {
 	String email;
 	boolean hasMenu;
 	String gender;
-	HashMap<Integer, String> categories;
+	HashMap<String, String> categories;
 	HashMap<String, Offer> offers;
 	
 	public Shop() {}
@@ -75,11 +75,11 @@ public class Shop {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public HashMap<Integer, String> getCategories() {
+	public HashMap<String, String> getCategories() {
 		return categories;
 	}
 
-	public void setCategories(HashMap<Integer, String> categories) {
+	public void setCategories(HashMap<String, String> categories) {
 		this.categories = categories;
 	}
 	public HashMap<String, Offer> getOffers() {
